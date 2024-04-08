@@ -116,7 +116,7 @@ python editing/app_edit.py
 ```
 ## TODO
 
-- [ ] Release editing code.
+- [x] Release editing code.
 
 ## Acknowledgement
 
