@@ -1,0 +1,85 @@
+tqdm
+rich
+ninja
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+opencv-python
+imageio
+imageio-ffmpeg
+
+einops
+tensorboard
+tensorboardX
+
+xformers
+
+# for gui
+dearpygui
+
+# for grid_tcnn
+# git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+
+# for stable-diffusion
+huggingface_hub
+diffusers==0.25.0
+accelerate
+transformers
+
+# for dmtet and mesh export
+xatlas
+trimesh
+PyMCubes
+pymeshlab==0.2.1 # which does not need GLIBC_2.25
+git+https://github.com/NVlabs/nvdiffrast/
+
+# for zero123
+carvekit-colab
+omegaconf
+pytorch-lightning==2.0.2
+taming-transformers-rom1504
+kornia
+git+https://github.com/openai/CLIP.git
+
+# for omnidata
+gdown
+
+# for dpt
+timm
+
+# for deepfloyd if
+sentencepiece
+
+# for SAM
+git+https://github.com/facebookresearch/segment-anything.git
+
+# for image caption
+open_clip_torch
+
+# for background remove
+rembg[gpu]
+
+# for PASD
+basicsr
+ultralytics
+webdataset
+
+#for editing
+pycocotools
+loguru
+torchmetrics
+xatlasF
+pyrallis
+onnxruntime
+onnx
+albumentations==1.3.0
+opencv-contrib-python==4.3.0.36
+test-tube==0.7.5
+streamlit
+kornia==0.6
+invisible-watermark>=0.1.5
+streamlit-drawable-canvas==0.8.0
+addict==2.4.0
+prettytable==3.6.0
