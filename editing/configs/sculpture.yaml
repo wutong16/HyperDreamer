@@ -1,0 +1,13 @@
+log:
+  exp_name: sculpture
+render:
+  base_theta: 90
+guide:
+  shape_path: editing/data/exp/sculpture2_1/mesh.obj
+  initial_texture: editing/data/exp/sculpture2_1/albedo.png
+  edit_text: 'The Hulk' #"Van Goph"
+  edit_model: 'Normal_Aware'
+  input_point: "[[573,486], [593,793],[634,979]]"  #"[[1129,977],[1173,1565],[1237,1689],[1005,1853],[1389,1845]]"
+  input_label: "[1,1,0]"
+optim:
+  seed: 23    

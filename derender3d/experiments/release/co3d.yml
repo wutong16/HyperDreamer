@@ -1,0 +1,60 @@
+## train celeba
+## trainer
+run_train: true
+num_epochs: 10
+batch_size: 12
+checkpoint_dir: results/models/co3d
+save_checkpoint_freq: 1
+keep_num_checkpoint: 2
+resume: true
+use_logger: true
+log_freq: 750
+
+## dataloader
+num_workers: 4
+image_size: 256
+load_gt_depth: false
+train_val_data_dir: ['datasets/co3d/extracted_hydrant/imgs_cropped', 'datasets/co3d/extracted_toybus/imgs_cropped', 'datasets/co3d/extracted_toytruck/imgs_cropped', 'datasets/co3d/extracted_toyplane/imgs_cropped', 'datasets/co3d/extracted_bench/imgs_cropped', 'datasets/co3d/extracted_chair/imgs_cropped', 'datasets/co3d/extracted_sandwich/imgs_cropped', 'datasets/co3d/extracted_toilet/imgs_cropped', 'datasets/co3d/extracted_umbrella/imgs_cropped']
+train_val_precomputed_dir: ['datasets/co3d/extracted_hydrant/precomputed', 'datasets/co3d/extracted_toybus/precomputed', 'datasets/co3d/extracted_toytruck/precomputed', 'datasets/co3d/extracted_toyplane/precomputed', 'datasets/co3d/extracted_bench/precomputed', 'datasets/co3d/extracted_chair/precomputed', 'datasets/co3d/extracted_sandwich/precomputed', 'datasets/co3d/extracted_toilet/precomputed', 'datasets/co3d/extracted_umbrella/precomputed']
+dataset_params:
+  flip_normal_x: true
+  flip_normal_y: true
+  flip_light_x: true
+  flip_light_y: true
+
+## model
+model_name: derender3d_co3d
+model: Derender3D
+min_depth: 0.9
+max_depth: 1.1
+xyz_rotation_range: 60  # (-r,r) in degrees
+xy_translation_range: 0.1  # (-t,t) in 3D
+z_translation_range: 0  # (-t,t) in 3D
+autoencoder_depth: 9
+lam_perc: 1
+lam_flip: 0.0
+lr: 0.0001
+predict_geometry: 'hr_depth'
+if_params:
+  spec_alpha: 'single'
+  spec_strength: 'single'
+  spec_alpha_max: 64
+  spec_strength_min: 0.1
+loss_params:
+  coeff_light: 0
+  rec_loss: 'l1_ssim'
+  only_foreground: true
+gan_params:
+  lam_GAN: 0.01
+  lam_GAN_nr: 0
+  alt_arch: true
+  light_sample_mode: 'mean'
+  only_foreground: true
+not_load_nets: []
+use_gan: true
+use_cycle: false
+
+## renderer
+rot_center_depth: 1.0
+fov: 10  # in degrees
+tex_cube_size: 2

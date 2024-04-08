@@ -1,0 +1,24 @@
+name: derender3d
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.9
+  - pip
+  - matplotlib
+  - ipython
+  - pytorch=1.11
+  - torchvision=0.12
+  - numpy
+  - pillow
+  - lpips
+  - opencv=4.5
+  - tqdm
+  - python-dateutil
+  - tensorboard=2.9
+  - tensorboardx
+  - pip:
+      - pytorch_msssim
+      - moviepy

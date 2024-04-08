@@ -1,0 +1,17 @@
+__pycache__/
+build/
+*.egg-info/
+*.so
+
+tets/256_tets.npz
+
+data/*_derender
+exp/
+
+*.pt
+*.pth
+*.ckpt
+PASD/runs/pasd/checkpoint-100000
+PASD/checkpoints/stable-diffusion-v1-5
+
+slurm_*.sh
