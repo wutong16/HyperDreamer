@@ -70,7 +70,7 @@ wget -O models/co3d/checkpoint010.pth https://www.robots.ox.ac.uk/~vgg/research/
 
 - **Editing** for editing (ControlNet-Normal2img)
 
-1) You can download `control_v11p_sd15_normalbae.pth` and `control_v11p_sd15_normalbae.yaml` from the [HuggingFace Model Page](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main), and put it under `pretrained/controlnet/...`.
+1) You can download `control_v11p_sd15_normalbae.pth` from the [HuggingFace Model Page](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main), and put it under `pretrained/controlnet/...`.
 
 2) You need to download Stable Diffusion 1.5 model ["v1-5-pruned.ckpt"](https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main) and put it under `pretrained/controlnet/...`.
 
