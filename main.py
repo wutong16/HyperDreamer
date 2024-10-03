@@ -339,7 +339,7 @@ if __name__ == '__main__':
                     trainer.relight(test_loader, save_path=os.path.join(opt.workspace, 'results_relight_rot'))
                 else:
                     trainer.log(f"==> Relighting: load light from {opt.relight_sg}")
-                    trainer.load_envmap()
+                    trainer.load_envmap(opt.relight_sg)
                     trainer.test(test_loader, save_path=os.path.join(opt.workspace, 'results_relight'))
             else: # use original lighting
                 trainer.test(test_loader)
