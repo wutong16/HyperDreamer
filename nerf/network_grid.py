@@ -104,6 +104,7 @@ class LightSGs(nn.Module):
 
     def load_light(self, envmap):
         device = self.lgtSGs.data.device
+        envmap = np.load(envmap)
         self.lgtSGs = nn.Parameter(torch.from_numpy(envmap).to(device), requires_grad=True)
         self.numLgtSGs = self.lgtSGs.data.shape[0]
         if self.lgtSGs.data.shape[1] == 7:
